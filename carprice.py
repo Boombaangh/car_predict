@@ -2,16 +2,12 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
+import pickle5 as pickle
 
 # Load the trained model
-model_path = pathlib.Path(__file__).parent / "price_model.pkl"
-
-if not model_path.exists():
-    st.error("'price_model.pkl'.")
-else:
-    with open(model_path, "rb") as file:
-        model_pipeline = pickle.load(file)
-
+model_filename = "price_model.pkl"
+with open(model_filename, "rb") as file:
+    model_pipeline = pickle.load(file)
 
 # Streamlit UI
 def main():
