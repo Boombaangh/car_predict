@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
+import sklearn 
 
 # Load the trained model
 model_filename = "price_model.pkl"
