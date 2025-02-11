@@ -4,8 +4,10 @@ import pandas as pd
 import numpy as np
 
 # Load the trained model
-with open('price_model.pkl', 'rb') as model_file:
-    model_pipeline = pickle.load(model_file)
+model_filename = "price_model.pkl"
+with open(model_filename, "rb") as file:
+    model_pipeline = pickle.load(file)
+
 
 # Streamlit UI
 def main():
